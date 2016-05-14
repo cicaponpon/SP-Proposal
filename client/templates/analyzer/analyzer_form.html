@@ -1,0 +1,24 @@
+<template name="analyzerForm">
+	 <form role="form" id="analyzerF">
+	 	<div class="form-group">
+	 	 	<label for="indicator-check">Technical Indicator:</label>
+	 	 		{{#each indicators}}
+				<div class="check">
+			      <label><input type="checkbox" value="{{this}}"  id="indicator-check">{{this}}</label>
+			    </div>
+	 	 		{{/each}}
+	 	 	<br>
+			<label for="company-select">Stock Symbol:</label>
+      		<select class="form-control" id="company-select">
+      			<option disabled="disabled" selected="selected"></option> 
+			    {{#each companyNames}}
+			        <option value="{{this}}">{{this}}</option>
+			    {{/each}}
+			 </select>
+			<br>
+			<button id="submit"  class="btn btn-warning active">Submit</button>
+		</div>
+	</form>
+	{{> signalModalTemplate}}
+</template>
+

@@ -1,0 +1,68 @@
+<template name="signalModalTemplate">
+  <div class="modal fade" id="signalModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+    	<div class="modal-header">
+        	<div id="chart">{{createChart}}</div>
+    	</div>
+        <div class="modal-body">
+        	<div class="wrap">
+	        	{{#each trade}}
+				  <input type="radio" class="{{rnav}}" id="{{slide}}" name="coins" {{ch}}>
+	        	{{/each}}
+
+	        	 <div class="boxes">
+				    {{#each trade}}
+				    	<div class="{{box}}">
+				    		<h4 class="modal-title" id="signalTitle">{{indicator}}</h4>
+				          	<table id="signalTable">
+				          	 <tr>
+							    <th>TRADE DATE</th>
+							 </tr>
+							 {{#each date}}
+							 		<tr>{{this}}</tr>
+							 {{/each}}
+				          	</table>
+				          	<table id="signalTable">
+				          	 <tr>
+							    <th>TRADE SIGNAL</th>
+							 </tr>
+							 {{#each signal}}
+							 		<tr>{{this}}</tr>
+							 {{/each}}
+				          	</table>
+				          	<table id="signalTable">
+				          	 <tr>
+							    <th>TRADE PRICE</th>
+							 </tr>
+							 {{#each price}}
+							 		<tr>{{this}}</tr>
+							 {{/each}}
+				          	</table>
+				          	
+				    	</div>
+				   {{/each}}
+				</div>
+
+	        	<div class="labels">
+				    {{#each trade}}
+				    	<label for="{{slide}}" class="{{sindex}}"></label>
+				   {{/each}}
+				</div>
+			</div>
+        </div>
+
+        <div class="modal-footer">
+          <br>
+            <div class="modal-btn">
+	            <button class="btn btn-warning active" type="button" id="simulate-trigger">Simulate</button>      
+	            <button type="button" class="btn btn-default" data-dismiss="modal" id="closeModal">Close</button>
+          	</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  {{>simulateFormTemplate}}
+</template>

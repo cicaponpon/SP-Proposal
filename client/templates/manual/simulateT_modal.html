@@ -1,0 +1,89 @@
+<template name="simTableModalTemplate">
+  <div class="modal fade" id="simTableModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+      <div class="modal-header">
+        <div id="Tchart">{{createTChart}}</div>
+      </div>
+        <div class="modal-body">
+          <div class="Twrap">
+            {{#each simulate}}
+              <input type="radio" class="{{rnav}}" id="{{slide}}" name="coins" {{ch}}>
+            {{/each}}
+
+            <div class="Tboxes">
+              {{#each simulate}}
+              <div class="{{box}}">
+                <h4 class="modal-title" id="simTitle">{{indicator}}</h4>
+                    <table id="simTable">
+                       <tr>
+                        <th>TRADE NO.</th>
+                       </tr>
+                        {{#each num}}
+                          <tr>{{this}}</tr>
+                        {{/each}}
+                    </table>
+                   
+                    <table id="simTable">
+                      <tr>
+                        <th>TRADE SIGNAL</th>
+                      </tr>
+                        {{#each signal}}
+                          <tr>{{this}}</tr>
+                        {{/each}}
+                    </table>
+                    
+                    <table id="simTable">
+                      <tr>
+                        <th>TRADE PRICE</th>
+                      </tr>
+                        {{#each price}}
+                          <tr>{{this}}</tr>
+                        {{/each}}
+                    </table>
+
+                     <table id="simTable">
+                      <tr>
+                        <th>TOTAL SHARES</th>
+                      </tr>
+                        {{#each income}}
+                          {{#if this}}
+                            <tr>{{this}}</tr>
+                          {{else}}
+                            <tr>-</tr>
+                          {{/if}}
+                        {{/each}}
+                    </table>
+
+                     <table id="simTable">
+                      <tr>
+                        <th>TOTAL INCOME</th>
+                      </tr>
+                        {{#each total}}
+                            <tr>{{this}}</tr>
+                        {{/each}}
+                    </table>
+                </div>
+              {{/each}}
+            </div>
+
+            <div class="Tlabels">
+              {{#each simulate}}
+                <label for="{{slide}}" class="{{sindex}}"></label>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <br>
+          <div class="modal-btn">
+            <button type="button" class="btn btn-default" data-dismiss="modal" id="closeModal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</template>

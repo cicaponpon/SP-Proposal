@@ -1,0 +1,29 @@
+<template name="simTableFormTemplate">
+  <div class="modal fade" id="simTableForm">
+    <div class="modal-dialog modal-sm" id="simulate-content">
+      <div class="modal-content">
+
+        <div class="modal-header">
+        </div>
+        <div class="modal-body">
+              <form role="form" id="simTableF">
+              <div class="form-group">
+                <label for="Tinit_income">Initial Income:</label>
+                <input type="number" class="form-control" id="Tinit_income" min="100">
+                <label for="Tnum_shares">No. of Shares:</label>
+                <input type="number" class="form-control" id="Tnum_shares" min="1">
+              </div>
+            </form> 
+        </div>
+
+        <div class="modal-footer">
+          <div class="modal-btn">
+            <button id="simulateT"  type="submit" class="btn btn-warning active form-control">Submit</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  {{>simTableModalTemplate}}
+</template>

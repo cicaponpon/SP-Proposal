@@ -1,0 +1,280 @@
+h1, p, body, html {
+	margin:0;
+	padding:0;
+}
+/*==========INPUT TABLE=======*/
+#InputTable{
+	margin-left: 19%;
+}
+#in{
+  display: block; padding: 0; margin: 0; border: 0.5; width: 100%;
+}
+
+.in {
+  margin: 0; padding: 0;
+}
+.tableInput{
+	border-color: #FFFFFF;
+}
+.tableInput:focus{
+	border:3px solid #ffa500;
+}
+
+#tableTitle,#signalTitle{
+	text-align: center;
+	font-weight: bold;
+}
+/*===============================*/
+#header button {
+	float: right;
+	background-color: 	transparent;
+    border: 			none;
+    cursor:				pointer;
+    overflow: 			hidden;
+    outline:			none;
+	color: 				#FFFFFF;
+	font-size: 			15px;
+	padding:			20px; 
+	border-radius: 		5px;
+	margin-bottom: 		10px;
+}
+#header button:hover{
+	color: 	#FF7F00;
+}
+#header button:disabled{
+	background-color: 	#FF7F00;
+	color: 				#FFFFFF;
+}
+#header button:enabled{
+	background-color: 	transparent;
+}
+#header-cont {
+    width:			100%;
+    position:		fixed;
+    top:			0px;
+	background:		#222222;
+}
+#header {
+    height:			60px;
+	background:		#222222;
+    width:			95%;
+    color: 			#FFFFFF;
+    padding: 		10px 0px 10px 0px;
+}
+#content{
+    width:			100%;
+ /*   background: 	#F0F0F0;*/
+}
+
+#footer {
+	background:		#222222;
+	text-align:		center;
+	padding:		10px;
+	color: 			#FFFFFF;
+}
+
+.clear {clear:both;}
+/*HOME*/
+#home{
+	height: 						700px;
+    background: 					url(/home_background.jpg) no-repeat center center ;
+    -webkit-background-size: 		cover; /* For WebKit*/
+    -moz-background-size: 			cover;    /* Mozilla*/
+    -o-background-size: 			cover;      /* Opera*/
+    background-size:				cover;         /* Generic*/
+    text-align: 					center;
+    padding:                        100px;
+}
+/*ANALYZER FORM STYLE*/
+.form-control{
+	margin-left: 		3%;
+}
+#analyzer,#input{
+    margin: auto;
+    width: 60%;
+}
+#analyzer,#input{
+    height: 700px;
+    padding-top: 200px;
+}
+.check{
+	margin:	10px 0px 10px 30px;
+}
+.check label{
+	font-weight: normal;
+}
+#submit,#createTable{
+	float: 		right;
+}
+
+/*Signal Modal & Simulate Modal*/
+#signalTable{
+	width: 				30%;
+}
+#simTable{
+	width: 				20%;
+}
+.boxes,.Sboxes,.Tboxes {
+  position: relative;
+  width: 680px;
+  height: 490px;
+  margin: 0 auto;
+}
+
+.box,.Sbox,.Tbox {
+  width: 680px;
+  height: 490px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.ADL:checked ~ .boxes > .ADL,
+.MOM:checked ~ .boxes > .MOM,
+.MACD:checked ~ .boxes > .MACD,
+.OBV:checked ~ .boxes > .OBV,
+.STO:checked ~ .boxes > .STO {
+  opacity: 1;
+}
+.ADLsim:checked ~ .Sboxes > .ADLsim,
+.MOMsim:checked ~ .Sboxes > .MOMsim,
+.MACDsim:checked ~ .Sboxes > .MACDsim,
+.OBVsim:checked ~ .Sboxes > .OBVsim,
+.STOsim:checked ~ .Sboxes > .STOsim {
+  opacity: 1;
+}
+.ADLsimTa:checked ~ .Tboxes > .ADLsimTa,
+.MOMsimTa:checked ~ .Tboxes > .MOMsimTa,
+.MACDsimTa:checked ~ .Tboxes > .MACDsimTa,
+.OBVsimTa:checked ~ .Tboxes > .OBVsimTa,
+.STOsimTa:checked ~ .Tboxes > .STOsimTa {
+  opacity: 1;
+}
+.ADLt:checked ~ .boxes > .ADLt,
+.MOMt:checked ~ .boxes > .MOMt,
+.MACDt:checked ~ .boxes > .MACDt,
+.OBVt:checked ~ .boxes > .OBVt,
+.STOt:checked ~ .boxes > .STOt {
+  opacity: 1;
+}
+.ADLsim:checked ~ .Slabels > .ADLsim-label,
+.MOMsim:checked ~ .Slabels > .MOMsim-label,
+.MACDsim:checked ~ .Slabels > .MACDsim-label,
+.OBVsim:checked ~ .Slabels > .OBVsim-label,
+.STOsim:checked ~ .Slabels > .STOsim-label {
+  background-color: #efb31f;
+}
+.ADLsimTa:checked ~ .Tlabels > .ADLsimTa-label,
+.MOMsimTa:checked ~ .Tlabels > .MOMsimTa-label,
+.MACDsimTa:checked ~ .Tlabels > .MACDsimTa-label,
+.OBVsimTa:checked ~ .Tlabels > .OBVsimTa-label,
+.STOsimTa:checked ~ .Tlabels > .STOsimTa-label {
+  background-color: #efb31f;
+}
+.ADL:checked ~ .labels > .ADL-label,
+.MOM:checked ~ .labels > .MOM-label,
+.MACD:checked ~ .labels > .MACD-label,
+.OBV:checked ~ .labels > .OBV-label,
+.STO:checked ~ .labels > .STO-label {
+  background-color: #efb31f;
+}
+.ADLt:checked ~ .labels > .ADLt-label,
+.MOMt:checked ~ .labels > .MOMt-label,
+.MACDt:checked ~ .labels > .MACDt-label,
+.OBVt:checked ~ .labels > .OBVt-label,
+.STOt:checked ~ .labels > .STOt-label {
+  background-color: #efb31f;
+}
+
+.labels,.Slabels,.Tlabels {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.s-index,.Ss-index,.Ts-index {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: inline-block;
+  margin-right: 6px;
+  cursor: pointer;
+  border: 1px solid;
+}
+
+.rnav,.Srnav,.Trnav {
+  display: none;
+}
+/*.modal-dialog{
+    overflow-y: initial !important;
+}*/
+#signalTitle{
+	text-align:		center;
+	margin-right: 	70px;
+	font-weight: 	bold;
+}
+#simTitle{
+	text-align:		center;
+	font-weight: 	bold;
+}
+.wrap{
+    overflow-y: auto;
+    margin-left: 	70px;
+}
+.Swrap,.Twrap{
+    overflow-y: 	auto;
+}
+#simulate-content{
+	margin-top: 100px;
+}
+
+
+
+/*TABLE*/
+table {
+    border-collapse: collapse;
+    float: 				left;
+    text-align: 		center;
+    border: 1px solid #ffb732;
+}
+
+
+th, tr {
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid #ffb732;
+}
+
+
+th {
+    background-color: #ffb732;
+    color: white;
+}
+
+
+
+#tableModal .modal-dialog,
+#outputModal .modal-dialog,
+#simTableModal .modal-dialog,
+#signalModal .modal-dialog,
+#simulateModal .modal-dialog{
+  background: #717174;
+  position:absolute;
+  overflow:scroll;
+  width: 90%;
+  height: 90%;
+  top: 0;
+  left: 5%;
+  opacity: 0.9;
+  z-index: 50;
+}
+#chart{
+	width: 100%;
+}
+#Schart,#Tchart{
+	width: 85%;
+}

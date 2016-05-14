@@ -1,0 +1,29 @@
+<template name="simulateFormTemplate">
+  <div class="modal fade" id="simulateForm">
+    <div class="modal-dialog modal-sm" id="simulate-content">
+      <div class="modal-content">
+
+        <div class="modal-header">
+        </div>
+        <div class="modal-body">
+              <form role="form" id="simulateF">
+              <div class="form-group">
+                <label for="init_income">Initial Income:</label>
+                <input type="number" class="form-control" id="init_income" min="100">
+                <label for="num_shares">No. of Shares:</label>
+                <input type="number" class="form-control" id="num_shares" min="1">
+              </div>
+            </form> 
+        </div>
+
+        <div class="modal-footer">
+          <div class="modal-btn">
+            <button id="simulate"  type="submit" class="btn btn-warning active form-control">Submit</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  {{>simulateModalTemplate}}
+</template>

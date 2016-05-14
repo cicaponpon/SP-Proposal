@@ -1,0 +1,16 @@
+<template name="inputForm">
+	 <form role="form" id="analyzerTable">
+	 <div class="form-group">
+		<label for="indicator-check">Technical Indicator:</label>
+		 	 {{#each indicators}}
+				<div class="check">
+				    <label><input type="checkbox" value="{{this}}"  id="tableIndicator-check">{{this}}</label>
+				</div>
+		 	 {{/each}}
+		<br>
+		<label for="rows">Rows:</label> <input type="number" class="form-control" name="rows" id="rows"  min="50" max="100"/><br/>
+		<input name="generate" type="button" value="Create Table" id="createTable" class="btn btn-warning active"/>
+		</div>
+	</form>
+	{{> tableModalTemplate}}
+</template>

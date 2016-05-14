@@ -1,0 +1,31 @@
+
+<head>
+	<title>Technical Indicators</title>
+</head>
+<body>
+
+	<div id="header-cont">
+		<div id="header">
+			<button id="btn1" onclick="smoothScroll(document.getElementById('input'))">USER INPUT ANALYZER</button>
+			<button id="btn2" onclick="smoothScroll(document.getElementById('analyzer'))">COMPANY DATA ANALYZER</button>
+			<button id="btn3" onclick="smoothScroll(document.getElementById('home'))" disabled="true">HOME</button>
+		</div>
+	</div>
+	<div id="content">
+		<div id="home">
+			<h1>Philippine Stock Market</h1>
+			<h2>Technical Analysis</h2>
+		</div>
+
+		<div id="analyzer">
+			{{> analyzerForm}}
+		</div>
+
+		<div id="input">
+			{{> inputForm}}
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div id="footer"><p>@ All rights reserved. 2016</p></div>
+
+</body>
